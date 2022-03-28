@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+
+
+  html,h1,h2,h3,p,div,a,button{
+    @apply font-rubik
+  }
+  /* .service-card {
+    @apply bg-green-500 hover:bg-green-600 w-full lg:w-64 h-16  flex items-center gap-4 lg:gap-2  cursor-pointer 
+  },
+  .icon{
+    @apply rounded-full w-7 h-7 items-center flex justify-center bg-white
+  },
+  .contact-anim{
+    @apply hover:text-white transition duration-100 hover:duration-700 ease-out
+  }  */
+
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-main{
+  background-image: url("../public/bg.png");
+}
+
+.rounded-help{
+  background-image: url("../public/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.boss{
+  position: relative;
+  z-index: 1000;
+}
+.boss:before { 
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("../public/boss.jpg");
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+ 
+}
+
+.inside{
+  color:#3D8882;
+  transition: 0.5s linear;
+  
+}
+
+
+.group:hover > .inside{
+  background-color: #3D8882;
+  transform: rotate(360deg);
+  color:white;
+}
+
+.group:hover > .text{
+  color:#000;
+}
+
+.social{
+  position: fixed;
+  z-index: 5000;
+}
+
+
+.rot{
+  transform: rotate(133deg);
+}
+
+#con:hover ~ #cub{
+  transform: rotate(133deg);
+
+}
+
+
+#data { 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#data:hover{
+  overflow: visible; 
+  white-space: normal;   
+  position: absolute;
+  background-color:rgb(90, 54, 54);
+  z-index: 10000;
+  width: inherit;
+}
+#data:hover+div {
+  margin-top:20px;
+}
+
+
+.containerX{
+  width:500px ;
+  height: 300px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  background-color: #3D8882;
+}
+
+.containerX .item{
+  flex: 0 0 500px;
+  width: 500px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 3rem;
+  color: aliceblue;
+  border: 2px solid #000;
+}
